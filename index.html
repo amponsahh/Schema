@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- Schema Final Project
+     Amponsah Nana, Lewis Jon -->
+<html lang="en-US"><head>
+
+<meta charset="UTF-8" />
+<title>Schema</title>
+
+<!-- Import a CSS stylesheet to style the page. -->
+<link href="style.css" rel="stylesheet" />
+
+</head><body>
+   
+   <!-- Fieldset that holds Projects, Priorities, Create button, and todo items. -->
+   <fieldset class="full-height">
+      <legend>
+         <strong>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Schema: Getting Things Done, Retro Style</a>
+         </strong>
+      </legend>
+      
+      <!-- Div that holds and positions Everything, Priorities and Project lists. -->
+      <div class="floatA">
+         <div id="main-menu" class="menu">
+            <ul class="spacings noBullets">
+               <li><span id="everything" class="hoverSelect">Everything</span>
+                  <ul class="noBullets spacings">
+                     <li>Projects <i id="projects-triangle" class="left">&#9660; </i>
+                        <ul id="projects-list" class="noBullets"></ul>
+                     </li>
+                  </ul>
+                  <ul class="noBullets spacings">
+                     <li>Priorities <i id="priorities-triangle" class="left">&#9660; </i>
+                        <ul id="priorities-list" class="noBullets"></ul>              
+                     </li> 
+                  </ul>
+               </li>
+            </ul>
+         </div>
+         
+         <ul id="to-do-list-output" class="to-do-decoration noBullets list-spacings"></ul>
+         <div><button id="create-to-do-list">+</button></div>
+      </div>
+      
+      <!-- Canvas to depict sessions completed. -->
+      <canvas id="graph" class="canvas-decoration"></canvas>
+      
+   
+      <!-- Hidden fieldset that creates, categorizes, and prioritizes tasks. -->
+      <fieldset id="create-fieldset" class="">
+         <legend>
+            <strong>
+               Create a task
+            </strong>
+         </legend>
+         <div id="create"> 
+            <div id="task">
+               I need to:
+               <input id="item-name" type="text"/>
+               
+               Please remind me in:
+               <input id="remind-time" type="number"/>
+               minutes
+            </div>
+            
+            <div id="Project">
+               Project:
+               <input id="tag-name" type="text"/>
+            </div>
+            
+            
+            <div>
+               Priority:
+               <form>
+                  <ul class="noBullets spacings">
+                     <li class="tooltip">
+                        <input type="radio" name="Priority" value="P1"/>
+                           P1<span class="tooltiptext">Urgent<br>Priority</span>
+                     </li>
+                     <li class="tooltip">
+                        <input type="radio" name="Priority" value="P2"/> 
+                           P2<span class="tooltiptext">High <br>Priority</span>
+                     </li>
+                     <li class="tooltip">
+                        <input type="radio" name="Priority" value="P3"/> 
+                           P3<span class="tooltiptext">Medium <br> Priority</span>
+                     </li>
+                     <li class="tooltip">
+                        <input type="radio" name="Priority" value="P4"/> 
+                           P4<span class="tooltiptext">Low <br> Priority</span>
+                     </li>
+                  </ul>
+               </form>   
+            </div>
+            <div>
+               <button id="add-item">Add</button>
+            </div>
+         </div>
+      </fieldset>
+      
+      
+   </fieldset>
+
+<!-- Import a JavaScript script to add interactivity to the page. -->
+<script src="script.js"></script>
+
+</body></html>

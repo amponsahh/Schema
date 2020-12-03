@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/* Amponsah Nana, Lewis Jon 
+styled for a 1920-1080 display*/
+
+/* Fixing the box-sizing attribute will make sizing boxes easier. */
+html {
+   box-sizing: border-box;
+}
+
+/* Normally the * selector is smart to avoid, but for this purpose it's fine. */
+*, *:before, *:after {
+   box-sizing: inherit;
+} 
+
+body {
+   background-color: #252525;
+   font-family: Courier New, sans-serif;
+   color: #E5E5E3;
+   font-size: 12pt;
+}
+
+html, body, .full-height { /* i've used this in a previous life - jon */
+   height: 98.7%;
+}
+
+legend { /* Schema font size */
+   font-size: 14pt;
+}
+
+legend:focus { /* Source: https://stackoverflow.com/questions/1457849/how-to-remove-the-border-highlight-on-an-input-text-element */
+   outline-width: 0;  /* hide tab highlight focus */
+   outline: none;
+}
+
+a, a:active, a:hover, a:visited, a:link { /* mask the rick roll */
+   text-decoration: none;
+   color: #E5E5E3
+}
+
+/* use rem as unit of measurement for const postions */
+.menu { /* menu and sub menu decoration */
+   width: 29rem;
+   border: gray;
+   border-style: solid;
+   border-width: 0.15rem;
+   word-wrap: break-word; /* Source: https://css-tricks.com/almanac/properties/o/overflow-wrap/ */   
+}
+
+.floatA { /* flex main page content */
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+}
+
+.spacings { /* we don't like paddings so we made a class wide template so we just call it */
+   padding: 0px;
+   margin: 1rem;
+}
+
+.noBullets { /* we also don't like bullets, see above, the reason why */
+   list-style-type: none;
+} 
+
+.hoverSelect:hover { /* underline and change the cursor when we hover selected text */
+   text-decoration: underline;
+   cursor: pointer;  
+   display: inline;
+}
+
+/* this one is for the arrow that hides and or shows the Projects and Priorities list */
+i { /* Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_arrows */
+  display: inline-block;
+  font-size: 6pt;
+}
+
+/* this one is for the arrow that hides and or shows the Projects and Priorities list */
+.left { /* Source: https://developer.mozilla.org/en-US/docs/Web/CSS/transform */
+   transition: transform .2s;
+   /* -webkit-transition: transform .2s; */ /* uncomment if smooth transition doesn't happen after click event */ 
+   cursor: pointer;  
+}
+
+/* this one is for the arrow that hides and or shows the Projects and Priorities list */
+.left.active { /* Source: https://developer.mozilla.org/en-US/docs/Web/CSS/transform */
+  transform: rotate(90deg);
+  /* -webkit-transform: rotate(90deg); */  /* uncomment if smooth transition doesn't happen after click event */
+  cursor: pointer;  
+}
+
+.list-spacings { /* remember how we don't like spacing and or padding or bullets, we also don't like the default spacing that come with lists - this is a long comment */
+   padding: 0.80rem;
+   margin: 0.027rem;
+   word-wrap: break-word; /* Source: https://css-tricks.com/almanac/properties/o/overflow-wrap/ */
+   word-break: break-all; /* Source: https://css-tricks.com/almanac/properties/w/word-break/ */
+}
+
+.to-do-decoration { /* Make the div for the list of to-dos look pretty */
+   border: gray;
+   border-style: solid;
+   border-width: 0.15rem;
+   height: 55.07rem;
+   width: 84.3rem;
+}
+
+.to-do-decoration:hover { /* like hoverSelect but no underline */
+   cursor: pointer;  
+}
+
+button#create-to-do-list { /* make our + button fancy */
+   outline: none;
+   color: gray;
+   font-size: 50pt;
+   border: none;
+   border-width: 0rem;
+   border-style: none;
+   background: transparent;
+   padding: 0rem;
+   margin: 0rem;   
+}
+
+.canvas-decoration { /* put a border around the canvas and overlay the flex postion */
+   border: gray;
+   border-style: solid;
+   border-width: 0.10rem; 
+   z-index: 1;
+   width: 29rem;
+   position: absolute;
+   bottom: 5.2%;
+   left: 1.15%;
+}
+
+.deg45 { /* animaton to rotate the + button */
+  transform: rotate(135deg);
+  outline:none;
+  transition: transform .2s;
+  /*-webkit-transition: transform .2s;*/ /* uncomment if smooth transition doesn't after click event */
+  cursor: pointer;
+}
+
+.tooltip { /* Source: https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip/ */
+  position: relative;
+  display: block;
+}
+
+.tooltip .tooltiptext { /* Source: https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip/ */
+   font-size: 10pt;
+   visibility: hidden;
+   width: 70px;
+   background-color: gray;
+   color: #fff;
+   text-align: center;
+   border-radius: 5px;
+   padding: 0.1rem;
+   margin: 0.6rem; /* Position the tooltip */
+   position: absolute;
+   z-index: 1;
+}
+
+.tooltip:hover .tooltiptext { /* Source: https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip/ */
+  visibility: visible;
+} 
+ 
+
+#create-fieldset { /* fieldset to create task decoration and center-ish position */
+   display: inline;
+   position:absolute;
+   top: 35%;
+   left: 42%;
+   z-index: 9;
+   margin:auto;
+   background: #252525;
+}
+
+
+#create { /* flexing the first row of the create to-do fieldset */
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+#create div { /* flexing the second row of the create to-do fieldset */
+   display: flex;
+   flex-direction: column;
+   margin: 10px;
+}
+
+.hidden { /* by default, hide the create to-do fieldset */
+   display: none !important; /* I've used this in a previous life. */
+}

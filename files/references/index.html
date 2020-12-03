@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+
+<meta charset="UTF-8" />
+<title>JavaScript examples for Studio 8</title>
+
+<!--
+CS 3312, spring 2019
+Examples for Studio 8
+-->
+
+<!-- Import a CSS stylesheet to style the page. -->
+<link href="example.css" rel="stylesheet" />
+
+</head><body>
+
+<h1>Web apps</h1>
+
+<fieldset id="unsaved-click-counter-area">
+   <legend>Unsaved click counter</legend>
+   <p class="number-output" id="unsaved-click-count">
+   </p>
+</fieldset>
+
+<fieldset id="saved-click-counter-area">
+   <legend>Saved click counter</legend>
+   <p class="number-output" id="saved-click-count">
+   </p>
+</fieldset>
+
+<fieldset id="color-quiz-area">
+   <legend>Color quiz</legend>
+   <p>
+      Click on the color below that has more blue in it.
+   </p>
+   <div class="quiz-colors">
+      <div id="quiz-color-left"></div>
+      <div id="quiz-color-right"></div>
+   </div>
+   <p>
+      Accuracy:
+      <span class="number-output" id="color-quiz-accuracy"></span>
+   </p>
+</fieldset>
+
+<fieldset id="to-do-list-area">
+   <legend>To-do list</legend>
+   <p>
+      <label>I need to do: <input id="to-do-list-item-to-add" type="text" /></label>
+      <button id="add-to-do-list-item" type="button">Add it to list!</button>
+   </p>
+   <p>
+      Click an item below to remove it from the list.
+   </p>
+   <ul id="to-do-list-output">
+   </ul>
+</fieldset>
+
+<fieldset id="controls-area">
+   <legend>Controls</legend>
+   <p>
+      <button id="forget-everything" type="button">Clear local storage</button>
+   </p>
+</fieldset>
+
+<!-- Import a JavaScript script to add interactivity to the page. -->
+<script src="example.js"></script>
+
+</body></html>
